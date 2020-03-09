@@ -10,7 +10,8 @@ public class PlantType implements PlantInterface {
 
 
     @Override
-    public void habitat() {
+    public void habitat()
+    {
         System.out.println("Where plants are grown");
     }
 }

@@ -1,27 +1,30 @@
 package org.example;
 
-public class Flowers extends PlantType {
-    private  String magnoliophyta;
+public class Flowers extends PlantType implements PlantInterface{
+    private  String magnoliophyta="magnoliopsida";
 
     public Flowers() {
     }
 
-    public Flowers(String magnoliophyta) {
+    public Flowers(String magnoliophyta)
+    {
         this.magnoliophyta = magnoliophyta;
     }
 
-    public void setMagnoliophyta(String magnoliophyta) {
+    public void setMagnoliophyta(String magnoliophyta)
+    {
         this.magnoliophyta = magnoliophyta;
     }
 
-    public String getMagnoliophyta() {
+    public String getMagnoliophyta()
+    {
         return magnoliophyta;
     }
 
     @Override
     public void classification() {
-        super.classification();
-       // System.out.println("Flower Classified as"+magnoliophyta);
+      //  super.classification();
+        System.out.println("Flower Classified as"+magnoliophyta);
     }
 
     @Override

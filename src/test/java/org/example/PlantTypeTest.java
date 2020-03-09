@@ -1,35 +1,46 @@
 package org.example;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class PlantTypeTest {
+
+
+
+    String macroalgae = "Haptophyta";
+    String magnoliophyta= "magnoliopsida";
 
     @Before
     public void setUp() throws Exception {
+
     }
 
     @Test
     public void classification() {
 
-        assertEquals("","Plants are classified","Plants are classified");
+
+        PlantType plantType= new PlantType();
+        PlantType Seeweed= new Seeweed(macroalgae);
+        PlantType Flowers= new Flowers(magnoliophyta);
+
+        Seeweed.classification();
+        Seeweed.habitat();
+
+        Flowers.classification();
+        Flowers.habitat();
+
+        Assert.assertEquals(Seeweed.getClass(),Seeweed.getClass());
 
     }
 
-    @Test
-    public void habitat() {
 
-        assertEquals("","Plants have a habitat","Plants have a habitat");
-    }
 
 
 
 
     @Test
     public  void  tearDown() throws Exception{
-
 
     }
 }
